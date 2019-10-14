@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn">发送请求</button>
+  <script src="./node_modules/axios/dist/axios.js"></script>
+  <script>
+   var btn = document.getElementById('btn')
+   const obj = 
+   btn.onclick = () => {
+     axios
+     .post('http://192.168.31.19:3001/myapi/login',{
+     username: 'cheng',
+     password: '2323'
+    })
+     .then((res) => {
+       console.log(res);
+       
+     })
+   }
+  
+  </script>
+</body>
+</html>

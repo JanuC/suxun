@@ -15,6 +15,11 @@
 </template>
 
 <script>
+import axios from 'axios'
+
+// 引入 bus
+import Bus from '@/assets/bus/bus.js'
+
 export default {
   data() {
     return {
@@ -25,13 +30,35 @@ export default {
       }
     }
   },
+
   methods: {
+    // 登录框是否可选
     check() {
       this.ruleForm.checked = this.ruleForm.username != '' && this.ruleForm.password !='' ?
       false : true
     },
     login() {
-
+      // 点击登录,发送请求到后台
+      axios
+      .post('http://192.168.31.19:3001/myapi/login',this.ruleForm)
+      .then((res) => {
+        // console.log(res);
+        const code = res.data.err_code
+        if(code === 200) {
+          // 登录成功,跳转到首页
+          location.hash = '/index/Index'
+        }else if(code === 1) {
+          // 登录失败
+          this.error()
+        }
+      })
+    },
+    error() {
+      this.$message({
+        message: '用户名或密码错误',
+        type: 'error',
+        center: true
+        })
     }
   },
 };
