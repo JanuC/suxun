@@ -1,0 +1,44 @@
+{
+   "user": [
+       {"id": 1,"username": "aaa","password": "111111","phone": "18346464444","messageid":1},
+       {"id": 2,"username": "bbb","password": "222222","phone": "18346464444","messageid":2}
+   ],
+   "message": [
+       {
+           "messageid": 1,
+           "friends":[
+               {"name": "张三","phone": "123456"},
+               {"name": "李四","phone": "23232"},
+               {"name": "王五","phone": "12314141456"}
+           ],
+           "family":[
+               {"name": "妈妈","phone": "4564646"},
+               {"name": "爸爸","phone": "41312346"},
+               {"name": "爷爷","phone": "4115151"}
+           ],
+           "student":[
+               {"name": "小花","phone": "1646465456"},
+               {"name": "小红","phone": "16463123"},
+               {"name": "小白","phone": "112313456"}
+           ]
+        },
+        {
+            "messageid": 2,
+            "friends":[
+                {"name": "黄渤","phone": "123456"},
+                {"name": "杨幂","phone": "23232"},
+                {"name": "吴亦凡","phone": "12314141456"}
+            ],
+            "family":[
+                {"name": "母亲","phone": "4564646"},
+                {"name": "父亲","phone": "41312346"},
+                {"name": "外婆","phone": "4115151"}
+            ],
+            "student":[
+                {"name": "前任","phone": "1646465456"},
+                {"name": "现任","phone": "16463123"},
+                {"name": "下一任","phone": "112313456"}
+            ]
+        }
+   ]
+}
