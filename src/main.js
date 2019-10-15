@@ -9,6 +9,9 @@ import 'element-ui/lib/theme-chalk/index.css'
 import App from './App'
 import router from './router'
 
+// 导入 font-awesome
+import '../node_modules/font-awesome/css/font-awesome.css'
+
 
 
 

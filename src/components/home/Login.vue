@@ -46,7 +46,7 @@ export default {
         const code = res.data.err_code
         if(code === 200) {
           // 登录成功,跳转到首页
-          location.hash = '/index/Index'
+          location.hash = '/index/contacts'
         }else if(code === 1) {
           // 登录失败
           this.error()

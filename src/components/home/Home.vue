@@ -5,7 +5,7 @@
       <h2>拉近我们心灵的距离，感知爱与陪伴</h2>
       <div class="btns">
           <router-link to="/home/Register">注册</router-link>
-          <router-link to="/home/Login" >登录</router-link>
+          <router-link to="/home/Login">登录</router-link>
       </div>
       <router-view></router-view>
     </div>
