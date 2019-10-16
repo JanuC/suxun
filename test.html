@@ -7,24 +7,66 @@
   <title>Document</title>
   <link rel="stylesheet" href="./node_modules//font-awesome/css/font-awesome.css">
 </head>
+<style>
+  li {
+    width: 200px;
+    height: 22px;
+    background-color: pink;
+  }
+</style>
 <body>
-  <button id="btn"><i class="fa fa-address-book" aria-hidden="true"></i>发送请求</button>
+  <div id="app">
+    <!-- <brother @sendmsg='f1'></brother> -->
+    <!-- <sister></sister> -->
+    <!-- <button @click="fn">111</button> -->
+    <!-- <p>arr: {{f1()}}</p> -->
+    <ul>
+      <li v-for="(item,index) in list" v-show="fn(item,index)">
+        {{ item.name}}
+      </li>
+    </ul>
+    <input type="text" @input="update(sMsg)" v-model="sMsg">
+  </div>
   <script src="./node_modules/axios/dist/axios.js"></script>
+  <script src="./node_modules/vue/dist/vue.js"></script>
   <script>
-   var btn = document.getElementById('btn')
-   const obj = 
-   btn.onclick = () => {
-     axios
-     .post('http://192.168.31.19:3001/myapi/login',{
-     username: 'cheng',
-     password: '2323'
-    })
-     .then((res) => {
-       console.log(res);
-       
-     })
-   }
   
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        index: 'family',
+        sMsg:'',
+        list: [  
+          { id: 1, name: '妈妈', tel: '13131313', lable: 'family' },
+          { id: 2, name: '爸爸', tel: '3131', lable: 'family' },
+          { id: 3, name: '张三', tel: '2323', lable: 'colleague' },
+          { id: 4, name: '小红', tel: '32323', lable: 'friend' } ]
+      },
+      computed: {
+        fn: function() {
+          return function(item,index) {
+            return this.list[index].lable === 'family'
+          }
+          
+        },
+        update() {
+          
+          return function(sMsg) {
+            const str = this.list[0].name
+            // console.log(str);
+            if(str.search(sMsg) != -1) {
+              console.log(1);
+              
+            }else {
+              console.log(0);
+              
+            }
+            
+          }
+        }
+      }
+    })
+    
   </script>
 </body>
 </html>

@@ -70,7 +70,6 @@ export default {
                 // 说明注册成功
                 this.success()
 
-
                 // 3s后跳转到登录组件
                 setTimeout(() => {
                   location.hash = '/home/login'

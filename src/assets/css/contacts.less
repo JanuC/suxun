@@ -1,0 +1,109 @@
+.el-main {
+  width: 100%;
+  height: 100%;
+  .main {
+    width: 100%;
+    height: 100%;
+    background-color: #f7fafc;
+    box-sizing: border-box;
+    padding-left: 100px;
+    .search {
+      width: 100px;
+      height: 40px;
+      .el-input {
+        width: 400px;
+        color: #ccc
+      }
+    }
+    .all {
+      font-size: 14px;
+    }
+    .select input {
+      cursor: pointer;
+    }
+    .ul {
+      width: 750px;
+      height: 500px;
+      box-sizing: border-box;
+      padding-top: 50px;
+      ul, li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      ul {
+        width: 100%;
+        height: 100%;
+      }
+      li {
+        float: left;
+        width: 220px;
+        height: 60px;
+        margin: 4px;
+        border-radius: 5px;
+        box-sizing: border-box;
+        transition: all 0.3s;
+        .msg {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          margin-right: 20px;
+          padding-top: 5px;
+          p {
+            font-size: 14px;
+          }
+        }
+        i {
+          position: absolute;
+          display: none;
+          cursor: pointer;
+        }
+        .fa-trash {
+          color: red;
+          right: -5px;
+          top:22px;
+          font-size: 20px;
+        }
+        .fa-pencil-square-o {
+          right: 15px;
+          top: 22px;
+          color: #0f88eb;
+          font-size: 20px;
+        }
+        img {
+          width: 60px;
+          height: 60px;
+        }
+        .msg {
+          width: 130px;
+          height: 60px;
+          float: right;
+          p {
+            margin: 4px 0;
+            padding: 0;
+            height: 20px;
+            line-height: 20px;
+          }
+        }
+      }
+      li:hover {
+        border: 1px solid #0f88eb;
+        transform: scale(1.05);
+        i {
+          display: block;
+        }
+      }
+    }
+    .noPerson {
+      width: 100%;
+      height: 100%;
+      h1 {
+        color: #555;
+        font-weight: normal;
+        font-size: 40px;
+        box-sizing: border-box;
+        padding: 140px 60px;
+      }
+    }
+  }
+}

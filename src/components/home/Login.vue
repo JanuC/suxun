@@ -42,10 +42,16 @@ export default {
       axios
       .post('http://192.168.31.19:3001/myapi/login',this.ruleForm)
       .then((res) => {
-        // console.log(res);
+        console.log(res);
         const code = res.data.err_code
+
+        //获取该用户对应的表
+        const tableName = res.data.tableName
         if(code === 200) {
           // 登录成功,跳转到首页
+          
+          // 将tableName 存储在localStorage中
+          localStorage.setItem('tableName',tableName)
           location.hash = '/index/contacts'
         }else if(code === 1) {
           // 登录失败
