@@ -2,15 +2,35 @@
   width: 100%;
   height: 100%;
 }
-#header {
+.header {
   height: 100px !important;
   background-image: url(../../../static/img/bg.png);
   background-size: cover;
   line-height: 100px;
+  position: relative;
   h1 {
     font-weight: normal;
     font-size: 50px;
-    color: #0f88eb
+    color: #0f88eb;
+    position: absolute;
+    left: 0;
+  }
+  .log {
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    span {
+      position: absolute;
+      left: 30px;
+    }
+    img {
+      border-radius: 50%;
+      width: 75px;
+      height: 75px;
+      margin-top: 10px;
+      margin-left: 110px;
+    }
   }
 }
 .el-aside {

@@ -1,7 +1,11 @@
 <template>
   <el-container>
-  <el-header id="header">
+  <el-header class="header">
     <h1>速讯</h1>
+    <div class="log">
+      <span>你好~</span>
+      <img src="../../../static/img/contact.jpg">
+    </div>
   </el-header>
   <el-container>
     <el-aside width="200px">

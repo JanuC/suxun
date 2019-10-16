@@ -22,7 +22,7 @@
       cursor: pointer;
     }
     .ul {
-      width: 750px;
+      width: 800px;
       height: 500px;
       box-sizing: border-box;
       padding-top: 50px;
@@ -37,18 +37,22 @@
       }
       li {
         float: left;
-        width: 220px;
+        width: 250px;
         height: 60px;
         margin: 4px;
         border-radius: 5px;
         box-sizing: border-box;
         transition: all 0.3s;
+        background-color: yellowgreen;
+        input {
+          height: 16px;
+          margin-top: 5px;
+          padding: 0;
+          width: 100px;
+          outline: none;
+          border: none;
+        }
         .msg {
-          width: 100%;
-          height: 100%;
-          position: relative;
-          margin-right: 20px;
-          padding-top: 5px;
           p {
             font-size: 14px;
           }
@@ -57,27 +61,30 @@
           position: absolute;
           display: none;
           cursor: pointer;
+          font-size: 20px;
         }
-        .fa-trash {
+        .fa-trash, .fa-times {
           color: red;
-          right: -5px;
-          top:22px;
-          font-size: 20px;
-        }
-        .fa-pencil-square-o {
           right: 15px;
-          top: 22px;
+          top:20px;
+        }
+        .fa-times {
           color: #0f88eb;
-          font-size: 20px;
+        }
+        .fa-pencil-square-o, .fa-check {
+          right: 38px;
+          top: 20px;
+          color: #0f88eb;
         }
         img {
           width: 60px;
           height: 60px;
         }
         .msg {
-          width: 130px;
+          width: 170px;
           height: 60px;
           float: right;
+          padding-top: 6px;
           p {
             margin: 4px 0;
             padding: 0;
