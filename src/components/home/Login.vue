@@ -52,6 +52,8 @@ export default {
           
           // 将tableName 存储在localStorage中
           localStorage.setItem('tableName',tableName)
+          // 将用户id存在localStorage中
+          localStorage.setItem('userid',res.data.userid)
           location.hash = '/index/contacts'
         }else if(code === 1) {
           // 登录失败
